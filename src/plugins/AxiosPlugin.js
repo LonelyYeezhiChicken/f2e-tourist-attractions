@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'https://ptx.transportdata.tw/MOTC/v2/',
+    baseURL: 'https://ptx.transportdata.tw/MOTC/v2',
     headers: { 'Content-Type': 'application/json' },
     timeout: 20000
   });
@@ -49,7 +49,7 @@ const instance = axios.create({
       case "post":
         return instance.post(url, data, config);
       case "get":
-        return instance.get(url, { params: data });
+        return instance.get(url);
       case "delete":
         return instance.delete(url, { params: data });
       case "put":
