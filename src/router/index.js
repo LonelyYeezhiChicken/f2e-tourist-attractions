@@ -1,9 +1,16 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
-export default createRouter({
-    history: createWebHashHistory(), routes: [
-        {
-            path: "/weclome", component: () => import("../components/HelloWorld.vue"),
-        }
-    ]
-});
+const routes = [
+    {
+      path: "/",
+      name: "Home",
+      component: () => import("../views/HomePage.vue"),
+    }
+  ];
+  
+  const router = createRouter({
+    history: createWebHistory(),
+    routes,
+})
+
+  export default router
