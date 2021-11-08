@@ -38,7 +38,7 @@ module.exports = {
           800: '#F9163E',
           900: '#E9062F',
         },
-        gray: {
+        grey: {
           100: '#FEFEFE',
           200: '#F0F0F0',
           300: '#D4D4D4',
@@ -51,7 +51,6 @@ module.exports = {
         },
       },
     },
-    extend: {},
   },
   plugins: [],
 }
