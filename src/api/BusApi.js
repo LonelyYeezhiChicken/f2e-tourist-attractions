@@ -90,7 +90,7 @@ export const s2TravelTime = (data) => {
   //取得台灣好行公車線型資料
   return req('get', `/Tourism/Bus/S2TravelTime/TaiwanTrip?${toQS(data)}`)
 }
-GET / v2 / Tourism / Bus / News / TaiwanTrip
+
 export const News = (data) => {
   //取得台灣好行公車線型資料
   return req('get', `/Tourism/Bus/News/TaiwanTrip?${toQS(data)}`)
