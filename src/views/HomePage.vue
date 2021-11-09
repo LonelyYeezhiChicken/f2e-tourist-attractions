@@ -3,8 +3,9 @@
     <Navbar />
     <GoogleMap />
     <div>
-      <SvgIcon class="search" name="search" width="2rem" height="2rem" />
+      <SvgIcon class="search" name="search" width="2rem" height="2rem"/>
       <SvgIcon name="tour" />
+      <SvgIcon name="brand" />
     </div>
   </div>
 </template>
