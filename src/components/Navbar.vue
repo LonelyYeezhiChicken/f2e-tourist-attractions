@@ -1,6 +1,6 @@
 <template>
   
-<nav class="flex bg-gray-200 flex-wrap items-center justify-between p-4">
+<nav class="flex bg-grey-200 flex-wrap items-center justify-between p-4">
     <div class="lg:order-2 w-auto lg:w-1/5 lg:text-center">
         <a class="text-xl text-gray-800 font-semibold font-heading" href="#">
             Charlie Rabiller
@@ -18,14 +18,8 @@
         </button>
     </div>
     <div class="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
-        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">
-            Home
-        </a>
-        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">
-            Team
-        </a>
-        <a class="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600" href="#">
-            Galery
+        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-grey-500 hover:text-indigo-600" href="#">
+            <search :label="'想要去哪?'"></search>
         </a>
     </div>
     <div class="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
@@ -44,8 +38,11 @@
 </template>
 <script>
 //import IconButton from './IconButton.vue'
+import search from './Input.vue'
 export default {
     name: 'Navbar',
-   // components: { IconButton }
+   components: { search },
+   methods: {
+   }
 }
 </script>
