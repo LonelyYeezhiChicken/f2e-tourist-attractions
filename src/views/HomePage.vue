@@ -2,6 +2,10 @@
   <div>
     <Navbar />
     <GoogleMap />
+    <div>
+      <SvgIcon class="search" name="search" width="2rem" height="2rem" />
+      <SvgIcon name="tour" />
+    </div>
   </div>
 </template>
 <script>

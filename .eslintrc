@@ -5,8 +5,13 @@
   "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "prettier"],
   "rules": {
     // override/add rules settings here, such as:
-    "no-unused-vars": "warn",
+    "no-unused-vars": "warn", // overrides the base rule
     // "vue/max-attributes-per-line": "off",
-    "vue/multi-word-component-names": "off" // 關掉禁用單一命名
+    "vue/multi-word-component-names": "off", // 關掉禁用單一命名
+    "vue/require-default-prop": "off" // 關掉禁用預設屬性
+  },
+  "globals": {
+    "defineProps": true,
+    "defineEmits": true
   }
 }
