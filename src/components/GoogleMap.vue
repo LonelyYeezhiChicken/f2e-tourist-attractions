@@ -26,9 +26,7 @@ export default {
       lng: 121.5614693,
     }
   },
-  created() {
-    console.log('test hello')
-  },
+  created() {},
   mounted() {
     this.initMap()
     this.setMarker()
