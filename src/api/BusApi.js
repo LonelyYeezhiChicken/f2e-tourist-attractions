@@ -1,97 +1,83 @@
-import { toQS } from '../utils/toQS'
-import req from '../plugins/AxiosPlugin'
+import req from '../utils/axiosPlugin'
 
+const cate = '/Tourism/Bus'
+
+/** 取得台灣好行公車的動態定時資料(A1) */
 export const allRealTimeByFrequency = (data) => {
-  //取得台灣好行公車的動態定時資料(A1)
-  return req('get', `/Tourism/Bus/RealTimeByFrequency/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/RealTimeByFrequency/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車的動態定時資料(A1) */
 export const itineraryRealTimeByFrequency = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車的動態定時資料(A1)
-  return req(
-    'get',
-    `/Tourism/Bus/RealTimeByFrequency/TaiwanTrip/${params}?${toQS(data)}`
-  )
+  return req.req(`${cate}/RealTimeByFrequency/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車的動態定點資料(A2) */
 export const allRealTimeNearStop = (data) => {
-  //取得台灣好行公車的動態定點資料(A2)
-  return req('get', `/Tourism/Bus/RealTimeNearStop/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/RealTimeNearStop/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車的動態定點資料(A2) */
 export const itineraryRealTimeNearStop = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車的動態定點資料(A2)
-  return req(
-    'get',
-    `/Tourism/Bus/RealTimeNearStop/TaiwanTrip/${params}?${toQS(data)}`
-  )
+  return req.get(`${cate}/RealTimeNearStop/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車的預估到站資料(N1) */
 export const allEstimatedTimeOfArrival = (data) => {
-  //取得台灣好行公車的預估到站資料(N1)
-  return req(
-    'get',
-    `/Tourism/Bus/EstimatedTimeOfArrival/TaiwanTrip?${toQS(data)}`
-  )
+  return req.req(`${cate}/EstimatedTimeOfArrival/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車的預估到站資料(N1) */
 export const itineraryEstimatedTimeOfArrival = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車的預估到站資料(N1)
-  return req(
-    'get',
-    `/Tourism/Bus/EstimatedTimeOfArrival/TaiwanTrip/${params}?${toQS(data)}`
-  )
+  return req.req(`${cate}/EstimatedTimeOfArrival/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車路線資料 */
 export const allRoute = (data) => {
-  //取得台灣好行公車路線資料
-  return req('get', `/Tourism/Bus/Route/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/Route/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車路線資料 */
 export const itineraryRoute = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車路線資料
-  return req('get', `/Tourism/Bus/Route/TaiwanTrip/${params}?${toQS(data)}`)
+  return req.get(`${cate}/Route/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車路線與站牌資料 */
 export const allStopOfRoute = (data) => {
-  //取得台灣好行公車路線與站牌資料
-  return req('get', `/Tourism/Bus/StopOfRoute/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/StopOfRoute/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車路線與站牌資料 */
 export const itineraryStopOfRoute = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車路線與站牌資料
-  return req(
-    'get',
-    `/Tourism/Bus/StopOfRoute/TaiwanTrip/${params}?${toQS(data)}`
-  )
+  return req.get(`${cate}/StopOfRoute/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車路線班表資料 */
 export const allSchedule = (data) => {
-  //取得台灣好行公車路線班表資料
-  return req('get', `/Tourism/Bus/Schedule/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/Schedule/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車路線班表資料 */
 export const itinerarySchedule = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車路線班表資料
-  return req('get', `/Tourism/Bus/Schedule/TaiwanTrip/${params}?${toQS(data)}`)
+  return req.get(`${cate}/Schedule/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車線型資料 */
 export const allShape = (data) => {
-  //取得台灣好行公車線型資料
-  return req('get', `/Tourism/Bus/Shape/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/Shape/TaiwanTrip`, data)
 }
 
+/** 取得指定[路線名稱]的台灣好行公車線型資料 */
 export const itineraryShape = (params, data) => {
-  //取得指定[路線名稱]的台灣好行公車線型資料
-  return req('get', `/Tourism/Bus/Shape/TaiwanTrip/${params}?${toQS(data)}`)
+  return req.get(`${cate}/Shape/TaiwanTrip/${params}`, data)
 }
 
+/** 取得台灣好行公車線型資料 */
 export const s2TravelTime = (data) => {
-  //取得台灣好行公車線型資料
-  return req('get', `/Tourism/Bus/S2TravelTime/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/S2TravelTime/TaiwanTrip`, data)
 }
 
+/** 取得台灣好行公車線型資料 */
 export const News = (data) => {
-  //取得台灣好行公車線型資料
-  return req('get', `/Tourism/Bus/News/TaiwanTrip?${toQS(data)}`)
+  return req.get(`${cate}/News/TaiwanTrip`, data)
 }

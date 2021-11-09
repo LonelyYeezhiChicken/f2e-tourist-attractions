@@ -56,13 +56,12 @@ export default {
     // 建立地標
     setMarker() {
       // 建立一個新地標
-      const marker = new google.maps.Marker({
+      new google.maps.Marker({
         // 設定地標的座標
         position: { lat: this.lat, lng: this.lng },
         // 設定地標要放在哪一個地圖
         map: this.map,
       })
-      // console.log(marker)
     },
     // 繪製路線
     drawPolyline() {
