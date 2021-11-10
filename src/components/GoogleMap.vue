@@ -1,7 +1,4 @@
 <template>
-  <div>
-    <Navbar />
-  </div>
   <div class="container mt-4">
     <div class="map-container border rounded">
       <ul class="nav justify-content-center border-bottom">
