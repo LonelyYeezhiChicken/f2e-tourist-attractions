@@ -8,6 +8,7 @@
     "no-unused-vars": "warn", // overrides the base rule
     // "vue/max-attributes-per-line": "off",
     "vue/multi-word-component-names": "off", // 關掉禁用單一命名
+    "vue/no-unused-components": "warn", // 關掉禁用未使用的組件
     "vue/require-default-prop": "off" // 關掉禁用預設屬性
   },
   "globals": {
