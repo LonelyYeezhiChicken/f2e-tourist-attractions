@@ -26,7 +26,7 @@ const contact = [
   'website',
 ]
 
-const atmosphere = ['price_level', 'rating', 'user_ratings_total']
+const atmosphere = ['price_level', 'rating', 'user_ratings_total', 'reviews']
 
 export const FIELDS = {
   basic,

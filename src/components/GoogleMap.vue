@@ -29,9 +29,9 @@ export default {
   },
   created() {},
   mounted() {
-    this.initMap()
-    this.setMarker()
-    this.drawPolyline()
+    // this.initMap()
+    // this.setMarker()
+    // this.drawPolyline()
   },
   methods: {
     // 建立地圖
