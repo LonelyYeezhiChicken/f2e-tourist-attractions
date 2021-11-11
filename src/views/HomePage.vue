@@ -1,27 +1,30 @@
 <template>
-  <div class="flex flex-col h-screen justify-between">
-    <router-view></router-view>
-    <GoogleMap :x="X" :y="Y" />
-    <Card
-      title="新北耶誕城"
-      :tag="cardTag"
-      img-src="https://cdn.walkerland.com.tw/images/upload/subject/2019/10/1653f11606fde4c760755aa2206c274df7c46598.jpg"
-    />
+  <div class="h-screen">
+    <!-- <Card img-src="http://210.69.151.212/ptngis/files/photos/l/marks/C1-13302.jpg"/> -->
+    <div class="relative flex justify-center items-center">
+      <p class="absolute text-grey-100 text-7xl font-extrabold animate__animated animate__bounce">開始實現你的夢想旅程</p>
+      <img src="../assets/homeMain.png" class="w-full h-5/6">
+    </div>
   </div>
 </template>
 <script>
-import GoogleMap from '../components/GoogleMap.vue'
-// import { cityScenicSpot } from '@/api/Api'
-import Card from '../components/Card.vue'
+import { cityScenicSpot, allScenicSpot } from '@/api/Api'
+import 'animate.css'
+// import Card from '../components/Card.vue'
+
 export default {
   name: 'HomePage',
-  //components: { Navbar, GoogleMap },
-  components: { GoogleMap, Card },
+  // components: { Card },
   data() {
     return { cardTag: ['新北', '耶誕城'], X: 25.01383, Y: 121.461472 }
   },
   created() {
-    // cityScenicSpot('NewTaipei', { $top: 10 })
+    cityScenicSpot('NewTaipei', { $top: 10 })
+    allScenicSpot({ $top: 10 }).then(res=>{
+      console.log(res.data)
+    })
   },
+  methods: {
+  }
 }
 </script>
