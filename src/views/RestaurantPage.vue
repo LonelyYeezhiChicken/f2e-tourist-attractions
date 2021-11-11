@@ -1,6 +1,6 @@
 <template>
   <h1>hello, restaurant</h1>
-  <button>Find</button>
+  <button @click="onClick">Find</button>
   <div id="map"></div>
 </template>
 
@@ -25,14 +25,18 @@ const onClick = () => {
   const request = {
     query: '福德水車公園生態園區',
     fields: fileds,
+    language: 'zh',
     locationBias: { lat, lng },
   }
 
+  let placeId = 'ChIJ03icGTexQjQRlaqTcp80Odo'
   const service = new google.maps.places.PlacesService(map)
-  service.findPlaceFromQuery(request, function (results, status) {
+  const callback = (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       console.log('🚀 ~ service.findPlaceFromQuery ~ results', results)
     }
-  })
+  }
+  //   service.findPlaceFromQuery(request, callback)
+  service.getDetails({ ...request, placeId }, callback)
 }
 </script>
