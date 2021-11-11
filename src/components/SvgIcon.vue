@@ -46,7 +46,7 @@ const svgClass = computed(() => `icon-${props.name} ${props.class}`)
 .svg-icon {
   width: 1rem;
   height: 1rem;
-  /* fill: currentColor; */
-  /* vertical-align: middle; */
+  fill: currentColor;
+  vertical-align: middle;
 }
 </style>
