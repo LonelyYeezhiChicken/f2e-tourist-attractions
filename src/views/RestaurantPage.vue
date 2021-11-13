@@ -1,42 +1,51 @@
 <template>
-  <h1>hello, restaurant</h1>
-  <button @click="onClick">Find</button>
-  <div id="map"></div>
+  <div class="h-auto">
+        <Banner :imgurl="'restaurant-banner'" title="餐廳列表"/>
+    </div>
 </template>
-
-<script setup>
-import { FIELDS } from '@/constants/google'
-const google = window.google
-
-// 福德水車公園生態園區 from TDX
-const lat = 25.24748992919922
-const lng = 121.50617218017578
-
-const onClick = () => {
-  const spot = new google.maps.LatLng(lat, lng)
-
-  const map = new google.maps.Map(document.getElementById('map'), {
-    center: spot,
-    zoom: 15,
-  })
-
-  const fileds = [...FIELDS.basic, ...FIELDS.atmosphere]
-
-  const request = {
-    query: '福德水車公園生態園區',
-    fields: fileds,
-    language: 'zh',
-    locationBias: { lat, lng },
-  }
-
-  let placeId = 'ChIJ03icGTexQjQRlaqTcp80Odo'
-  const service = new google.maps.places.PlacesService(map)
-  const callback = (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      console.log('🚀 ~ service.findPlaceFromQuery ~ results', results)
-    }
-  }
-  //   service.findPlaceFromQuery(request, callback)
-  service.getDetails({ ...request, placeId }, callback)
+<script>
+import Banner from '@/components/Banner.vue'
+export default {
+  name: 'RestaurantPage',
+  components: { Banner }
 }
 </script>
+<!--
+ <script setup>
+// import { FIELDS } from '@/constants/google'
+// const google = window.google
+
+// // 福德水車公園生態園區 from TDX
+// const lat = 25.24748992919922
+// const lng = 121.50617218017578
+
+// const onClick = () => {
+//   const spot = new google.maps.LatLng(lat, lng)
+
+//   const map = new google.maps.Map(document.getElementById('map'), {
+//     center: spot,
+//     zoom: 15,
+//   })
+
+//   const fileds = [...FIELDS.basic, ...FIELDS.atmosphere]
+
+//   const request = {
+//     query: '福德水車公園生態園區',
+//     fields: fileds,
+//     language: 'zh',
+//     locationBias: { lat, lng },
+//   }
+
+//   let placeId = 'ChIJ03icGTexQjQRlaqTcp80Odo'
+//   const service = new google.maps.places.PlacesService(map)
+//   const callback = (results, status) => {
+//     if (status === google.maps.places.PlacesServiceStatus.OK) {
+//       console.log('🚀 ~ service.findPlaceFromQuery ~ results', results)
+//     }
+//   }
+//   //   service.findPlaceFromQuery(request, callback)
+//   service.getDetails({ ...request, placeId }, callback)
+// }
+// </script>
+
+-->
