@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-    name: 'icon-input',
+    name: 'IconInput',
     props: {label: { type: String, required: true }}
 }
 </script>
