@@ -1,7 +1,7 @@
 <template>
   <Navbar />
   <router-view />
-  <Footer class="mt-40"/>
+  <Footer class="mt-52"/>
 </template>
 <script>
 import Navbar from '@/components/Navbar.vue'
