@@ -13,8 +13,8 @@
       </p>
       <img src="../assets/homeMain.png" class="w-full h-5/6" />
     </div>
-    <Groups class="my-10 mt-20" title="熱門打卡景點" :cardArray="cardArry" />
-    <div class="relative flex justify-center items-center">
+    <Groups class="my-10 mt-20" title="熱門打卡景點" :card-array="cardArry" />
+    <div class="relative flex justify-center items-center mt-40">
       <div class="absolute text-grey-100 text-5xl font-extrabold">
         你不能錯過的著名景點
       </div>
@@ -33,7 +33,7 @@
       </button>
       <img src="../assets/homeFooter.png" class="w-full h-5/6" />
     </div>
-    <Groups class="my-10" :title="'Rainbow Life!'" :cardArray="cardArry" />
+    <Groups class="my-10" :title="'Rainbow Life!'" :card-array="cardArry" />
   </div>
 </template>
 <script>
