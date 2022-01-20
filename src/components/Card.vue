@@ -11,15 +11,16 @@
       cursor-pointer
       m-auto
       p-5
+      mb-20
     "
   >
     <a href="#" class="w-full block h-full">
       <img
         alt="blog photo"
-        :src="imgSrc"
+        :src="card.Picture.PictureUrl1"
         class="max-h-40 w-full object-cover rounded-xl"
       />
-      <div class="bg-white dark:bg-gray-800 w-full p-4">
+      <div class="bg-white dark:bg-gray-800 w-full">
         <button
           class="
             bg-white
@@ -34,8 +35,8 @@
         >
           <SvgIcon name="favor" width="2rem" height="2rem" color="#28DAA5" />
         </button>
-        <p class="text-gray-800 dark:text-white text-xl font-medium mb-2">
-          {{ title }}
+        <p class="text-gray-800 dark:text-white text-xl font-medium my-2">
+          {{ card.ScenicSpotName }}
         </p>
         <div class="flex item-center mt-2">
           <svg
@@ -49,19 +50,19 @@
         </div>
         <div class="flex flex-wrap justify-starts items-center mt-4">
           <div
-            v-for="(item, index) in tag"
+            v-for="(item, index) in card.label"
             :key="index"
             class="
               text-xs
               mr-2
               py-1.5
               px-4
-              text-gray-600
-              bg-blue-100
+              text-white
+              bg-primary-600
               rounded-2xl
             "
           >
-            #{{ item }}
+            {{ item }}
           </div>
         </div>
       </div>
@@ -73,9 +74,7 @@
 export default {
   name: 'Card',
   props: {
-    title: { type: String, required: true },
-    tag: { type: Array },
-    imgSrc: { type: String },
+    card: { type: Object },
   },
   data() {
     return {
