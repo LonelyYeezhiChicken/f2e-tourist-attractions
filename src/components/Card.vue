@@ -10,13 +10,14 @@
       md:w-80
       cursor-pointer
       m-auto
+      p-5
     "
   >
     <a href="#" class="w-full block h-full">
       <img
         alt="blog photo"
         :src="imgSrc"
-        class="max-h-60 w-full object-cover"
+        class="max-h-40 w-full object-cover rounded-xl"
       />
       <div class="bg-white dark:bg-gray-800 w-full p-4">
         <button
@@ -70,7 +71,7 @@
 
 <script>
 export default {
-  name: 'card',
+  name: 'Card',
   props: {
     title: { type: String, required: true },
     tag: { type: Array },
