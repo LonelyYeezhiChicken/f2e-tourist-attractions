@@ -51,11 +51,8 @@ export default {
     let _self = this
     cityScenicSpot('NewTaipei', { $top: 10 })
     allScenicSpot({ $top: 10 }).then((res) => {
-      console.log(res.data)
       for (let i = 0; i < 4; i++) {
-        // if (res.data[i].Picture.lengh > 1) {
         _self.cardArry.push(res.data[i])
-        //}
       }
     })
   },
