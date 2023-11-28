@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "axios": "^0.24.0",
+    "axios": "^1.6.0",
     "jssha": "^3.2.0",
     "vue": "3.1.5",
     "vue-router": "^4.0.12",
